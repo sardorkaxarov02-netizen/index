@@ -109,11 +109,90 @@
       
       <div class="hero4">
         <div class="text4">
-            <p>Our Clients</p>
+            <p><b>Our Clients</b></p>
             <h1>Glint has been honored to partner <br> up with these clients</h1>
         </div>
+        <div class="img3">
+            <img src="imgi_8_apple.png" alt="">
+            <img src="imgi_9_atom.png" alt="">
+            <img src="imgi_10_blackberry.png" alt="">
+            <img src="imgi_11_dropbox.png" alt="">
+            <img src="imgi_12_envato.png" alt="">
+            <img src="imgi_13_firefox.png" alt="">
+            <img src="imgi_14_joomla.png" alt="">
+        </div>
+        <hr>
+         <div class="carousel-container">
+        <!-- Chapga o'tkazish tugmasi -->
+        <button class="nav-btn prev-btn" id="prevBtn">&#8592;</button>
+
+        <!-- Slaydlar (Yozuvlar) -->
+        <div class="carousel-slides">
+            <!-- 1-Yozuv -->
+            <div class="slide active">
+                Qui ipsam temporibus quisquam vel. Maiores eos cumque <br> distinctio nam accusantium ipsum. Laudantium quia consequatur <br> molestias delectus culpa facere hic dolores aperiam. Accusantium <br> quos qui praesentium corpori. Excepturi nam cupiditate culpa <br> doloremque deleniti repellat.
+            </div>
+            
+            <!-- 2-Yozuv -->
+            <div class="slide">
+                Excepturi nam cupiditate culpa doloremque deleniti repellat. <br> Veniam quos repellat voluptas animi adipisci. Nisi eaque <br> consequatur. Quasi voluptas eius distinctio. Atque eos maxime. <br> Qui ipsam temporibus quisquam vel.
+            </div>
+
+            <!-- 3-Yozuv -->
+            <div class="slide">
+                <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam. Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.`</p>
+            </div>
+        </div>
+
+        <!-- O'ngga o'tkazish tugmasi -->
+        <button class="nav-btn next-btn" id="nextBtn">&#8594;</button>
+    </div>
+
+   
       </div>
-    
+
+
+
+
+
+
+
+
+
+ <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            // Slaydlar chegarasidan chiqib ketmaslik uchun
+            if (index >= slides.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else {
+                currentIndex = index;
+            }
+
+            // Hamma slaydlardan active klassini olib tashlash
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+            });
+
+            // Faqat joriy slaydga active klassini qo'shish
+            slides[currentIndex].classList.add('active');
+        }
+
+        // Tugmalarga bosilgandagi funksiyalar
+        nextBtn.addEventListener('click', () => {
+            showSlide(currentIndex + 1);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            showSlide(currentIndex - 1);
+        });
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
   AOS.init();

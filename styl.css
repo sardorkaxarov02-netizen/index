@@ -200,3 +200,99 @@ hr{
     display: flex;
     right: 160px;
 }
+.hero4{
+    background-color: #E6E6E6;
+    margin-top: 115%;
+    height: 150vh;
+}
+.text4{
+    text-align: center;
+    padding: 160px;
+}
+.text4 p {
+    font-size: 30px;
+    color: #39B54A;
+}
+.text4 h1{
+    font-size: 60px;
+}
+.img3 img{
+    height: 130px;
+}
+.img3{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: -69px;
+}
+
+
+        /* Karusel konteyneri */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            padding: 40px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 270px;
+        }
+
+        /* Slaydlar maydoni */
+        .carousel-slides {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            min-height: 150px; /* Matn balandligiga qarab moslashadi */
+        }
+
+        /* Har bir slayd stili */
+        .slide {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            text-align: center;
+            color: #333;
+            font-size: 30px;
+            line-height: 1.8;
+            pointer-events: none;
+        }
+
+        /* Aktiv slayd ko'rinishi */
+        .slide.active {
+            position: relative;
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: auto;
+        }
+
+        /* Tugmalar (Chap va O'ng) */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #555;
+            cursor: pointer;
+            padding: 10px;
+            transition: color 0.3s;
+            user-select: none;
+        }
+
+        .nav-btn:hover {
+            color: #000;
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
