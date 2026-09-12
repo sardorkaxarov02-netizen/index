@@ -462,3 +462,6 @@ hr{
     display: flex;
     gap: 30px;
 }
+.tt2{
+    display: flex;
+}
